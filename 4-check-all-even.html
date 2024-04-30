@@ -8,13 +8,14 @@
 <body>
     <script>
         const numbers = [10, 20,700, 30, 40, 50];
-        let maxNumber = [0];
-        for(let i = 0; i<numbers.length; i++){
-            if(numbers[i]>maxNumber){
-                maxNumber = numbers[i]
+        let allEven = true;
+        for(let num of numbers){
+            if(num%2 !== 0){
+                allEven = false; 
+                break
             }
-        } 
-        console.log(maxNumber);
+        }
+        console.log(allEven);
     </script>
 </body>
 </html>

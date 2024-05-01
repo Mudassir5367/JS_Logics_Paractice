@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        const numbers = [10, 20, 10, 30, 40, 20];
+        let removeDuplicates = [...new Set(numbers)]
+        console.log(removeDuplicates);
+
+        // 2
+        const num1 = [10, 20, 10, 30, 40, 20];
+        const uniqueArr = []
+        for(let i = 0; i<num1.length; i++){
+            if(uniqueArr.indexOf(num1[i]) == -1){
+                console.log(num1[i]);
+                uniqueArr.push(num1[i])
+            }
+        }
+        console.log(uniqueArr);
+
+        // 3
+        let num2 = [10, 20, 10, 30, 40, 20];
+        let newArr = num2.filter((val,i,arr)=> {
+            console.log('val',val);
+            console.log('arr',arr);
+            console.log('i',i);
+           return arr.indexOf(val) == i
+        })
+        console.log('num2: ', newArr);
+
+    </script>
+</body>
+</html>

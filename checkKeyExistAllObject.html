@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+    { name: 'Alice', age: 20 },
+    { name: 'Bob', age: 21 },
+    { name: 'Charlie' }
+];
+const keyToCheck = 'age';
+let key = true;
+for(let std of students){
+    if(!(keyToCheck in std)){
+        key = false;
+        break
+    }
+}
+console.log("All objects have key", keyToCheck + ":", key);
+    </script>
+</body>
+</html>

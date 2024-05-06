@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+    { name: 'Alice', score: 80, passed: true },
+    { name: 'Bob', score: 60, passed: false },
+    { name: 'Charlie', score: 75, passed: true }
+];
+let totalScore = 0;
+for(std of students){
+    if(std.passed){
+        totalScore += std.score
+    }
+}
+console.log('totalScore', totalScore);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' }
+];
+const searchId = 2;
+let index = -1;
+for(let i = 0; i<students.length; i++){
+    if(students[i].id == searchId){
+        // console.log(students[0].id);
+        index = i
+        break
+    }
+}
+console.log("Index of student with id", searchId, ":", index);
+    </script>
+</body>
+</html>

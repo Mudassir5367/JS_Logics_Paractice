@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+    { department: 'Math', year: 1 },
+    { department: 'Science', year: 2 },
+    { department: 'Math', year: 3 },
+    { department: 'Math', year: 1 }
+];
+const searchDepartment = 'Math';
+let count = 0;
+for(let std of students){
+    if(std.department == searchDepartment ){
+        count++
+    }
+}
+console.log('count', count);
+    </script>
+</body>
+</html>

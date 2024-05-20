@@ -12,8 +12,12 @@
     { name: 'Bob', score: 60 },
     { name: 'Charlie', score: 75 }
 ];
-let average = students.reduce((sum, num)=> sum += num.score, 0)/students.length + '%';
-console.log(average);
+let average = students.reduce((sum, num)=>{
+    sum += num.score 
+    console.log(sum);
+    return sum // here return is more important  remove the return here and see what is working 
+},0) 
+console.log(average/students.length);
     </script>
 </body>
 </html>

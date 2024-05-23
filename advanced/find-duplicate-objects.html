@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findDuplicateObjects(arr, prop) {
+    const counts = {};
+    arr.forEach(obj => {
+        const key = obj[prop];
+        console.log('key',key);
+        counts[key] = counts[key] ? counts[key] + 1 : 1;
+        // console.log('counts[key]',counts[key]);
+    });
+    return Object.entries(counts).filter(([key, count]) => count > 1).map(([key]) => key);
+}
+
+const people = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Alice' },
+    { id: 4, name: 'Charlie' }
+];
+const duplicateNames = findDuplicateObjects(people, 'name');
+console.log(duplicateNames);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validateString(str) {
+    if (typeof str !== 'string' || str.length < 2) {
+        return false; // The input must be a string and at least 2 characters long
+    }
+
+    const firstChar = str.charAt(0);
+    const isFirstCharUppercaseLetter = /^[A-Z]$/.test(firstChar);
+
+    if (!isFirstCharUppercaseLetter) {
+        return false; // The first character must be an uppercase letter
+    }
+
+    const containsDigit = /\d/.test(str.slice(1));
+
+    return containsDigit; // The string must contain at least one digit
+}
+
+// Examples
+console.log(validateString("A123")); // true
+console.log(validateString("a123")); // false (first letter is not uppercase)
+console.log(validateString("Abc1")); // true
+console.log(validateString("ABC"));  // false (no digits)
+console.log(validateString("1ABC")); // false (first character is not a letter)
+console.log(validateString("A"));    // false (no digits)
+
+    </script>
+</body>
+</html>
